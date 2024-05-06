@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver2 Advanced HTML & CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #d1d1d1;
+            width: 80%; /* agar ketika di slip tidak terpotong */
+        }
+        /* h1 {
+            display: block;
+        }
+        h1:hover {
+            display: none; hover berati menghilangkan element
+            visibility: hidden;
+        } */
+
+        .header {
+            background: aliceblue;
+            /* margin-bottom: 20px; */
+            padding: 10px 50px;
+            margin: 10px auto;
+            border-radius: 20px; /*agar ujung kotak tidak terlalu lancip*/
+            width: 800px; /* memberikan lebar header */
+            position:fixed;
+        }
+
+        .wrapper {
+            width: 800px; /* membuat werapper memiliki lebar 800px */
+            background: white;
+            margin: 10px auto; /* membuat wrapper 60px 60px 60px 60px  */
+            padding-top: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 1px 1px #aaa;
+            /*membuat kotak box terlihat megambang*/
+        }
+
+        .input-wrapper {
+            /* width: 100%; memberikan lebar pada kolom input */
+            width: calc(100% - 20px); /* memberikan pemerataan menghitung dengan 100% padding, kenapa 20px? krn padding kanan kiri jika dijjumlahkan sebanyak 20px*/
+            margin-top: 4px; /* memberikan margin atas 4 pixel */
+            margin-bottom: 8px; /* memberikan margin bawah 8px */
+            padding: 10px;
+        }
+
+        .submit  {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px 0;
+            /* artinya atas bawah 10px kanan kiri 0, gausah dirubah agar center */
+            cursor: pointer;
+            background-color: #4072b8;
+            border: none; 
+            /* secara default border itu ada sehingga agar enak dilihat bisa dihilangkan */
+            border-radius: 10px; /* agar border lembut */
+            opacity: 0.8;
+            transition: 0.5s; 
+            /* hrs ada satuan untuk memberikan waktu ketika transition */
+        }
+
+        .table-wrapper{
+            margin: 10px;
+            padding: 10px;
+            width: 800px;
+        }
+
+        .wrapper table {
+            width: 100%;
+        }
+
+        th {
+            background-color: blue;
+            color: white;
+            padding: 6px;
+            margin: 10px;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+            transition: 0.1s;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 800px) {
+            /* untuk reonsif di device yang berbeda */
+            .wrapper {
+                width: 100%;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        REVOU Data Analytics and Software Engineer
+    </div>
+
+    <div class="wrapper">
+        <h1>Contact Form</h1>
+    <form>
+        <label for="name">Name:</label> <!-- penggunaan for bisa /tidak digunakan hanya saja untuk penjelasan bahwa label for nama -->
+        <input class="input-wrapper" type="text" required placeholder="Please enter your full name">
+
+        <label for="name">Age:</label>
+        <input class="input-wrapper" type="number" min="15" max="60" placeholder="Please enter your age">
+
+        <label for="name">Email:</label>
+        <input class="input-wrapper" type="email" required placeholder="Please enter your email">
+
+        <label for="dob">DoB:</label>
+        <input class="input-wrapper" type="date">
+
+        <label for="name">Message:</label>
+        <textarea class="input-wrapper" rows="4" required placeholder="Please enter your message"></textarea>
+
+        <button class="submit" type="submit">SUBMIT</button>
+    </form>
+    </div>
+
+    <div class="wrapper">
+        <h1>List of Student</h1>
+        <p>List of todays student</p>
+    <table><!-- depan bisa diberikan nama class yang sama agar ketika distyle akan terpanggil juga -->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>DoB</th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td>Sifa</td>
+                <td>21</td>
+                <td>sifa1305@gmail.com</td>
+                <td>13/05/2003</td>
+            </tr>
+            <tr>
+                <td>Sifa</td>
+                <td>21</td>
+                <td>sifa1305@gmail.com</td>
+                <td>13/05/2003</td>
+            </tr>
+            <tr>
+                <td>Sifa</td>
+                <td>21</td>
+                <td>sifa1305@gmail.com</td>
+                <td>13/05/2003</td>
+            </tr>
+            <tr>
+                <td>Sifa</td>
+                <td>21</td>
+                <td>sifa1305@gmail.com</td>
+                <td>13/05/2003</td>
+            </tr>
+        </body>
+    </table>
+
+    <img src="https://source.unsplash.com/200x200" alt="Random Image">
+    <!-- <video src="song-epilogue.mp4" controls>Your browser does not support the audio element</video>
+    unduh dari savefromNet Youtube kemudian diupload melalui lokal
+    <audio src="song-epilogue.mp4" controls>Your browser does not support the audio element</audio>
+    jika menggunakan audio dengan video maka yang muncul berupa suara 
+    akan tetapi kemungkinan kecepatan website akan berat--> 
+    </div>
+    
+    <!-- <iframe src="https:revou.co/" width="1500px" height="600px"></iframe> -->
+</body>
+</html>
